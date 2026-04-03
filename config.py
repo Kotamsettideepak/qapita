@@ -13,9 +13,8 @@ def _get_required_env(name: str) -> str:
     return value.strip()
 
 
-JSONPLACEHOLDER_BASE_URL = _get_required_env("JSONPLACEHOLDER_BASE_URL").rstrip("/")
-REQUEST_TIMEOUT_SECONDS = float(_get_required_env("REQUEST_TIMEOUT_SECONDS"))
-HTTP_HOST = _get_required_env("HOST")
-HTTP_PORT = int(_get_required_env("PORT"))
-MCP_HTTP_PATH = _get_required_env("MCP_HTTP_PATH")
-LOG_LEVEL = _get_required_env("LOG_LEVEL")
+RESTCOUNTRIES_BASE_URL = _get_required_env("RESTCOUNTRIES_BASE_URL").rstrip("/")
+REQUEST_TIMEOUT_SECONDS = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "10"))
+HTTP_HOST = os.getenv("HOST", "0.0.0.0")
+HTTP_PORT = int(os.getenv("PORT", "8000"))
+MCP_HTTP_PATH = os.getenv("MCP_HTTP_PATH", "/mcp")
