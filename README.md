@@ -103,6 +103,5 @@ Render will inject `PORT` automatically.
 ## Troubleshooting
 
 - If Claude Code cannot connect to the remote server, verify the Render service URL and make sure the MCP endpoint path matches `/mcp`.
-- If the service is up but tool calls fail, check the `/health` endpoint first and then review Render logs for upstream timeout or HTTP errors.
 - If local HTTP does not appear in Claude Code, verify the server is running and that the URL points to `/mcp`.
 - If you change the endpoint path with `MCP_HTTP_PATH`, update the Claude Code config to use the same path.
