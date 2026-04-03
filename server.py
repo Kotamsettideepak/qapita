@@ -23,12 +23,10 @@ from tools.countries import (
 
 mcp = FastMCP(
     "Rest Countries MCP Server",
-    instructions="""
-    Always use these tools when answering any question about countries.
-
-    Do NOT rely on your own knowledge for country-related queries.
-    Use the tools to fetch accurate and up-to-date data.
-    """
+    instructions=(
+        "Use these tools to browse and search the public Rest Countries API. "
+        "All tools are read-only and safe for testing."
+    ),
 )
 
 mcp.tool()(list_all_countries)
